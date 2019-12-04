@@ -2,7 +2,7 @@
     font-size: 11px;
 }
 html{
-    height: 100%;
+
 }
 body {
     background-image: url("../img/backround.png"), linear-gradient(#c0e6ef, #f1fafe);
@@ -13,6 +13,7 @@ body {
 .btn-warning{
     color: white ;
     background-color: #ff7533;
+    letter-spacing: 1px;
 }
 header{
     background: white;
@@ -35,8 +36,82 @@ h2, h3{
     font-weight: bold;
 }
 
-.registrationForm{
+#registrationFormUsername{
     position: relative;
-    top:19px;
-    left:10px;
+    top:40px;
+    left:8px;
+    font-size: 8px;
+}
+
+#registrationFormEmail{
+    position: relative;
+    top:73px;
+    left:8px;
+    font-size: 8px;
+}
+
+#registrationFormPassword{
+    position: relative;
+    top:105px;
+    left:8px;
+    font-size: 8px;
+}
+
+#registrationFormUsernameCheckbox{
+    position: relative;
+    bottom: 182px;
+    right: 9px;
+    height: 12px;
+    width: 12px;
+    background: #f6f8fc;
+}
+
+#registrationFormEmailCheckbox{
+    position: relative;
+    bottom: 137px;
+    left: 3px;
+    height: 12px;
+    width: 12px;
+    background: #f6f8fc;
+}
+
+#registrationFormPasswordCheckbox{
+    position: relative;
+    bottom: 93px;
+    left: 15px;
+    height: 12px;
+    width: 12px;
+    background: #f6f8fc;
+}
+
+.registrationInput{
+    padding-top: 23px;
+    padding-bottom: 14px;
+}
+
+a:link {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover::after {
+    position: relative;
+    height: 150px;
+    width: 150px;
+    color: black;
+}
+
+a:active {
+    text-decoration: underline;
+    color: #ff7533;
+}
+
+.registerLogin {
+    font-weight: bold;
+    font-size: 16px;
 }
