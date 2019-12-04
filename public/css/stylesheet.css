@@ -36,6 +36,25 @@ h2, h3{
     font-weight: bold;
 }
 
+#registrationIndicator {
+    position: absolute;
+    display: block;
+    background: #ff7533;
+    height: 3px;
+    width: 65px;
+    margin-top: 10px;
+    }
+
+#loginIndicator {
+    position: absolute;
+    display: none;
+    background: #ff7533;
+    height: 3px;
+    width: 80px;
+    margin-top: 10px;
+    left: 90px;
+}
+
 #registrationFormUsername{
     position: relative;
     top:40px;
@@ -50,9 +69,23 @@ h2, h3{
     font-size: 8px;
 }
 
+#loginFormEmail{
+    position: relative;
+    top:40px;
+    left:8px;
+    font-size: 8px;
+}
+
 #registrationFormPassword{
     position: relative;
     top:105px;
+    left:8px;
+    font-size: 8px;
+}
+
+#loginFormPassword{
+    position: relative;
+    top:73px;
     left:8px;
     font-size: 8px;
 }
@@ -84,7 +117,7 @@ h2, h3{
     background: #f6f8fc;
 }
 
-.registrationInput{
+.registrationInput , .loginInput{
     padding-top: 23px;
     padding-bottom: 14px;
 }
@@ -114,4 +147,12 @@ a:active {
 .registerLogin {
     font-weight: bold;
     font-size: 16px;
+}
+
+#registrationForm {
+    display: block;
+}
+
+#loginForm {
+    display: none;
 }
