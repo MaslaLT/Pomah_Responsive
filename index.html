@@ -41,8 +41,10 @@
                         </a>
                     </div>
                     <div class="ml-md-auto my-md-2 my-4 text-center">
-                        <button type="button"  class="btn bg-transparent px-4 py-2"><b>Login</b></button>
-                        <button type="button"  class="btn btn-warning px-5 py-2"><b>Register</b></button>
+                        <button id="navbarLogin" type="button"  class="trigger btn bg-transparent px-4 py-2"
+                        onclick="changeLoginToRegistrationForm()"><b>Login</b></button>
+                        <button id="navbarRegister" type="button"  class="trigger btn btn-warning px-5 py-2"
+                        onclick="changeRegistrationToLoginForm()"><b>Register</b></button>
                     </div>
                 </div>
             </nav>
@@ -55,50 +57,51 @@
                         <h2>Register to pamoh</h2>
                         <div class="mt-2 text-secondary">Join to Pamoh you will get the best recommendation for rent
                             house in near of you.</div>
-                        <div id="registerLogin" class="mt-5 pb-3 border-bottom ">
-                            <a class="registerLogin" href="#" onclick="changeRegistrationToLoginForm()">Register</a>
-                            <a class="registerLogin ml-3" href="#" onclick="changeLoginToRegistrationForm()">Login</a>
-                            <div id="registrationIndicator"></div>
-                            <div id="loginIndicator"></div>
-                        </div>
+                        <div id="registrationLoginForm">
+                            <div id="registerLogin" class="mt-5 pb-3 border-bottom ">
+                                <a class="registerLogin" href="#" onclick="changeRegistrationToLoginForm()">Register</a>
+                                <a class="registerLogin ml-3" href="#" onclick="changeLoginToRegistrationForm()">Login</a>
+                                <div id="registrationIndicator"></div>
+                                <div id="loginIndicator"></div>
+                            </div>
 
-                        <div id="registrationForm">
-                            <div id="registrationFormUsername" class="my-0 text-secondary">Username</div>
-                            <div id="registrationFormEmail" class="my-0 text-secondary">Email</div>
-                            <div id="registrationFormPassword" class="my-0 text-secondary">Password</div>
-                            <form class="text-secondary" method="post">
-                                <input class="form-control registrationInput border-light
-                                font-weight-bold mb-2" type="text" name="firstname">
-                                <input class="form-control registrationInput border-light
-                                font-weight-bold mb-2" type="email" name="email">
-                                <input class="form-control registrationInput border-light
-                                font-weight-bold mb-2" type="password" name="password">
-                                <input class="btn btn-warning btn-block font-weight-bold p-3 my-4"
-                                       type="submit" value="REGISTER">
-                            </form>
-                            <div class="float-right" id="registrationFormUsernameCheckbox"></div>
-                            <div class="float-right" id="registrationFormEmailCheckbox"></div>
-                            <div class="float-right" id="registrationFormPasswordCheckbox"></div>
-                        </div>
+                            <div id="registrationForm">
+                                <div id="registrationFormUsername" class="my-0 text-secondary">Username</div>
+                                <div id="registrationFormEmail" class="my-0 text-secondary">Email</div>
+                                <div id="registrationFormPassword" class="my-0 text-secondary">Password</div>
+                                <form name="registrationForm" class="text-secondary" method="post" onsubmit="return validateFormRegistration()">
+                                    <input class="form-control registrationInput border-light
+                                    font-weight-bold mb-2" type="text" name="firstName">
+                                    <input class="form-control registrationInput border-light
+                                    font-weight-bold mb-2" type="email" name="email">
+                                    <input class="form-control registrationInput border-light
+                                    font-weight-bold mb-2" type="password" name="password">
+                                    <input class="btn btn-warning btn-block font-weight-bold p-3 my-4"
+                                           type="submit" value="REGISTER">
+                                </form>
+                                <div class="float-right" id="registrationFormUsernameCheckbox"></div>
+                                <div class="float-right" id="registrationFormEmailCheckbox"></div>
+                                <div class="float-right" id="registrationFormPasswordCheckbox"></div>
+                            </div>
 
-                        <div id="loginForm">
-                            <div id="loginFormEmail" class="my-0 text-secondary">Email</div>
-                            <div id="loginFormPassword" class="my-0 text-secondary">Password</div>
-                            <form class="text-secondary mt-3" method="post">
-                                <input class="form-control loginInput border-light
-                                font-weight-bold mb-2" type="email" name="email">
-                                <input class="form-control loginInput border-light
-                                font-weight-bold mb-2" type="password" name="password">
-                                <input class="btn btn-warning btn-block font-weight-bold p-3 my-4"
-                                       type="submit" value="LOGIN">
-                            </form>
-                            <div class="float-right" id="registrationFormUsernameCheckbox"></div>
-                            <div class="float-right" id="registrationFormEmailCheckbox"></div>
-                            <div class="float-right" id="registrationFormPasswordCheckbox"></div>
+                            <div id="loginForm">
+                                <div id="loginFormEmail" class="my-0 text-secondary">Email</div>
+                                <div id="loginFormPassword" class="my-0 text-secondary">Password</div>
+                                <form name="loginForm" class="text-secondary mt-3" method="post" onsubmit="return validateFormLogin()">
+                                    <input class="form-control loginInput border-light
+                                    font-weight-bold mb-2" type="email" name="email">
+                                    <input class="form-control loginInput border-light
+                                    font-weight-bold mb-2" type="password" name="password">
+                                    <input class="btn btn-warning btn-block font-weight-bold p-3 my-4"
+                                           type="submit" value="LOGIN">
+                                </form>
+                                <div class="float-right" id="loginFormEmailCheckbox"></div>
+                                <div class="float-right" id="loginFormPasswordCheckbox"></div>
+                            </div>
                         </div>
-
                     </div>
                 </div>
+
                 <div class="col-md-7 col-11 px-0 mx-auto">
                     <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                         <ol class="carousel-indicators">

@@ -99,9 +99,27 @@ h2, h3{
     background: #f6f8fc;
 }
 
+#loginFormEmailCheckbox{
+    position: relative;
+    bottom: 137px;
+    right: 9px;
+    height: 12px;
+    width: 12px;
+    background: #f6f8fc;
+}
+
 #registrationFormEmailCheckbox{
     position: relative;
     bottom: 137px;
+    left: 3px;
+    height: 12px;
+    width: 12px;
+    background: #f6f8fc;
+}
+
+#loginFormPasswordCheckbox{
+    position: relative;
+    bottom: 93px;
     left: 3px;
     height: 12px;
     width: 12px;
